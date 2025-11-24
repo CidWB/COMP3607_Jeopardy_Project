@@ -6,7 +6,7 @@ public class Question {
     private String category;
     private int value;
     private String content;
-    private List<String> options;
+    private List<String> options; // change to HashMap
     private String correctAnswer;
     private List<String> answers;
     private boolean isAnswered;
