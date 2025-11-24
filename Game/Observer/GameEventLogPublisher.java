@@ -1,7 +1,9 @@
 package Observer;
 import java.util.ArrayList;
+import Command.Action;
 
 public class GameEventLogPublisher {
+    private GameController controller = GameController.getInstance();
     private ArrayList<GameObserver> observers = new ArrayList<>();
     private GameEventLog log;
 
@@ -19,7 +21,9 @@ public class GameEventLogPublisher {
         }
     }
 
-    public void setLog(GameEventLog log){
-        this.log = log;
+    public void createLog(Action action, String playerId){
+        int caseId = controller.getCaseID();
+        String timestamp; // add timestamp
+        this.log = new GameEventLog(caseId, playerId, timestamp, action);
     }
 }

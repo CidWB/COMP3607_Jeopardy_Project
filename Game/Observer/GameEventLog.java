@@ -14,14 +14,11 @@ public class GameEventLog {
     private boolean isCorrect;
     private int newScore;
 
-    public GameEventLog(int caseId, String timestamp, Action action){
+    public GameEventLog(int caseId, String playerId, String timestamp, Action action){
         this.caseId = caseId;
+        this.playerId = playerId;
         this.timestamp = timestamp;
         this.action = action;
-    }
-
-    public void setPlayer(String playerId){ // could also initialise with playerId
-        this.playerId = playerId;
     }
 
     public void setCategory(String category){
